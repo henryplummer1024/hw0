@@ -1,0 +1,15 @@
+print
+size
+head
+tail
+append 17.1
+print
+append 7.3
+size
+head
+tail
+prepend 91.5
+print
+size
+head
+tail
