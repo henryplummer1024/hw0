@@ -14,6 +14,13 @@ int main(int argc, char** argv)
 	int programSuccess = -1;
 	std::ifstream* file = new std::ifstream;
 
+	if (argc != 2)
+	{
+		std::cout << "Error - incorrect number of command line arguments" << '\n';
+		std::cout << "Correct syntax -> hw0 fileToOpen.txt" << std::endl;
+		return -2;
+	}
+
 	if (openFile(argv[1], file))
 	{
 		printOutput(argv[1], readFile(file));
@@ -21,7 +28,7 @@ int main(int argc, char** argv)
 	}
 	else
 	{
-		programSuccess = -2;
+		programSuccess = -3;
 	}
 
 	closeFile(argv[1], file);
